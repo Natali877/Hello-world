@@ -1,39 +1,33 @@
-package HomeWork6;
+package inheritance;
 
 public class Point {
 
-    private  int x;
-    private  int y;
+    private int x;
+    private int y;
 
     public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
 
-    public double distanse () {
-        double curentDistance = Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2) );
+    public double distanse(Point point) {
+        double curentDistance = Math.sqrt(Math.pow(this.x - point.getX(), 2) + Math.pow(this.y - point.getY(), 2));
         return curentDistance;
     }
 
-    public double distanse (Point point) {
-        double curentDistance = Math.sqrt(Math.pow(this.x-point.getX(), 2) + Math.pow(this.y-point.getY(), 2) );
-        return curentDistance;
+    public void setX(int x) {
+        this.x = x;
     }
 
-
-    public void setX (int x1){
-        x = x1;
+    public void setY(int y) {
+        this.y = y;
     }
 
-    public void setY (int y1){
-        y = y1;
-    }
-
-    public int getX (){
+    public int getX() {
         return x;
     }
 
-    public int getY (){
+    public int getY() {
         return y;
     }
 
